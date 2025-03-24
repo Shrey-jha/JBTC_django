@@ -1,0 +1,30 @@
+{% extends 'transport/base.html' %}
+{% load static %}
+
+{% block title %}Home - JBTC{% endblock %}
+
+{% block content %}
+<section class="home">
+    <div class="hero">
+        <h1>Welcome to Jay Bajrang Transport Company</h1>
+        <p>Your trusted partner for all your transportation needs.</p>
+        <p>you can <a class="btn" href="{% url 'load_form' %}">Book a Load </a>online or get a quote by filling form</p>
+    </div>
+
+    <div class="get-quote">
+        <h2>Get a Quote</h2>
+        <form method="post" action="{% url 'home' %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <div class="feedback-link">
+        <h2>We Value Your Feedback</h2>
+        <p>Your feedback helps us improve our services.<a href="{% url 'feedback' %}">Give Feedback</a></p>
+        
+        <a class="btn" href="{% url 'feedback' %}">Give Feedback</a>
+    </div>
+</section>
+{% endblock %}

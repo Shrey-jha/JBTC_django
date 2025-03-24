@@ -1,0 +1,47 @@
+{% extends 'transport/base.html' %}
+{% load static %}
+
+{% block title %}About Us - JBTC{% endblock %}
+
+{% block content %}
+<section class="about-us">
+    <h1>About Us</h1>
+    <div class="company-intro">
+        <h2>Jay Bajrang Transport Company</h2>
+        <p><strong>We provide a wide range of transport services including trucks and buses. Our mission is to deliver efficient, reliable, and safe transportation solutions to meet your needs.</strong></p>
+    </div>
+
+    <div class="services">
+        <h3>Our Services</h3>
+        <ul>
+            <li><strong>Trucks: 10-wheelers, 12-wheelers, and 14-wheelers</strong></li>
+            <li><strong>Buses: 30-seaters, 50-seaters</strong></li>
+        </ul>
+    </div>
+
+    <div class="mission-vision">
+        <h3>Our Mission</h3>
+        <p>To be the leading transportation company providing top-notch logistics solutions with a focus on customer satisfaction and operational excellence.</p>
+
+        <h3>Our Vision</h3>
+        <p>To expand our services across the nation and establish a reputation for dependability, innovation, and customer-centric solutions in the transport industry.</p>
+    </div>
+
+    <div class="team">
+        <h3>Meet Our Team</h3>
+        <div class="team-members">
+            <div class="team-member">
+                <img src="{% static 'transport/team-member1.png' %}" alt="Team Member 1">
+                <h4>John Doe</h4>
+                <p>CEO & Founder</p>
+            </div>
+            <div class="team-member">
+                <img src="{% static 'transport/team-member1.png' %}" alt="Team Member 2">
+                <h4>Jane Smith</h4>
+                <p>Operations Manager</p>
+            </div>
+            <!-- Add more team members as needed -->
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'transport/base.html' %}
+{% load static %}
+
+{% block title %}Contact Us - JBTC{% endblock %}
+
+{% block content %}
+<section class="contact-us">
+    <h1>Contact Us</h1>
+    <div class="contact-details">
+        <p><strong>Jay Bajrang Transport Co</strong></p>
+        <p>RNRC Ghat Road, Shibpur, Howrah, West Bengal - 711102</p>
+        <p>Phone: <a href="tel:+961048521">961048521</a></p>
+        <p>Email: <a href="mailto:info@jbtc.com">info@jbtc.com</a></p>
+    </div>
+
+    <div class="contact-form">
+        <h2>Send Us a Message</h2>
+        <form method="post" action="{% url 'contact' %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</section>
+{% endblock %}
